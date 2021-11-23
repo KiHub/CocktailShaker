@@ -29,7 +29,7 @@
                                 </state>
                                 <connections>
                                     <action selector="shakeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yvg-bw-T5T"/>
-                                    <segue destination="qKK-mk-2B0" kind="show" id="YKp-yz-F6r"/>
+                                    <segue destination="wHj-MO-JnT" kind="show" id="Mlk-vm-gTB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake your phone and get random cocktail recipe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2R-lE-QMG">
@@ -76,101 +76,156 @@
             <objects>
                 <viewController id="qKK-mk-2B0" customClass="RecipeViewController" customModule="CocktailShaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C4m-pD-za7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="c1j-m3-hXp">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="c1j-m3-hXp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="gJh-dU-MuA">
-                                <rect key="frame" x="30" y="150" width="354" height="692"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" contentInsetAdjustmentBehavior="scrollableAxes" translatesAutoresizingMaskIntoConstraints="NO" id="3f2-33-Vhf">
+                                <rect key="frame" x="20" y="140" width="374" height="926"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Margarita" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gin-ai-koI" userLabel="Name">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="0.0"/>
-                                        <color key="backgroundColor" red="0.4039215686" green="0.53725490200000003" blue="0.51372549020000002" alpha="0.38072559929999999" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
-                                        <color key="textColor" red="0.90196078430000004" green="0.86666666670000003" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="margaritaimage" translatesAutoresizingMaskIntoConstraints="NO" id="Jxv-MU-gFU" userLabel="Image">
-                                        <rect key="frame" x="0.0" y="27" width="354" height="253.5"/>
-                                    </imageView>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YW6-Fz-crI" userLabel="Collection Ingridients">
-                                        <rect key="frame" x="0.0" y="307.5" width="354" height="148.5"/>
-                                        <color key="backgroundColor" red="0.4039215686" green="0.53725490200000003" blue="0.51372549020000002" alpha="0.68415560789999996" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" priority="900" constant="148.5" id="EJL-dh-4iS"/>
-                                        </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VvO-f4-Whb">
-                                            <size key="itemSize" width="128" height="128"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nEm-EA-m2b">
-                                                <rect key="frame" x="0.0" y="10.5" width="128" height="128"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6WM-xh-UKD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </collectionViewCellContentView>
-                                            </collectionViewCell>
-                                        </cells>
-                                    </collectionView>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08O-3s-vpv" userLabel="Description">
-                                        <rect key="frame" x="0.0" y="483" width="354" height="209"/>
-                                        <color key="backgroundColor" red="0.4039215686" green="0.53725490200000003" blue="0.51372549020000002" alpha="0.38072559929999999" colorSpace="calibratedRGB"/>
-                                        <string key="text">Rub the rim of the glass with the lime slice to make the salt stick to it.
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" axis="vertical" distribution="equalCentering" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3bQ-kY-kgG">
+                                        <rect key="frame" x="0.0" y="0.0" width="2300" height="7011"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Margarita" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9I-LK-3q9">
+                                                <rect key="frame" x="0.0" y="0.0" width="2300" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="margaritaimage" translatesAutoresizingMaskIntoConstraints="NO" id="HmJ-V3-J1F">
+                                                <rect key="frame" x="0.0" y="1180.5" width="2300" height="2300"/>
+                                            </imageView>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ict-NX-sKu">
+                                                <rect key="frame" x="0.0" y="3500.5" width="2300" height="2300"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Lzp-fI-Nvj">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="veN-xP-HVT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Tyv-3d-iPL">
+                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </collectionViewCellContentView>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdd-gx-g2k">
+                                                <rect key="frame" x="0.0" y="6929.5" width="2300" height="81.5"/>
+                                                <string key="text">Rub the rim of the glass with the lime slice to make the salt stick to it.
 Take care to moisten only the outer rim and sprinkle the salt on it.
 The salt should present to the lips of the imbiber and never mix into the cocktail.
-Shake the other ingredients with ice, then carefully pour into the glass.
-</string>
-                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                        <color key="textColor" red="0.90196078430000004" green="0.86666666670000003" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </label>
+Shake the other ingredients with ice, then carefully pour into the glass.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="Jxv-MU-gFU" firstAttribute="top" secondItem="Gin-ai-koI" secondAttribute="bottom" constant="27" id="7PE-zY-LLc"/>
-                                </constraints>
-                                <variation key="heightClass=compact-widthClass=regular" axis="vertical"/>
-                            </stackView>
+                                <viewLayoutGuide key="contentLayoutGuide" id="RIA-ei-U6d"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="UwY-Wq-PEM"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NBX-Aq-zA7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="gJh-dU-MuA" secondAttribute="trailing" constant="30" id="ELx-ed-vHq"/>
-                            <constraint firstAttribute="bottom" secondItem="c1j-m3-hXp" secondAttribute="bottom" id="IRh-1m-VmF"/>
-                            <constraint firstItem="NBX-Aq-zA7" firstAttribute="bottom" secondItem="gJh-dU-MuA" secondAttribute="bottom" constant="20" id="ZA0-dq-IlR"/>
-                            <constraint firstItem="c1j-m3-hXp" firstAttribute="trailing" secondItem="C4m-pD-za7" secondAttribute="trailing" id="awW-M7-F2Y"/>
-                            <constraint firstItem="c1j-m3-hXp" firstAttribute="top" secondItem="C4m-pD-za7" secondAttribute="top" id="b7O-bY-Hab"/>
-                            <constraint firstItem="gJh-dU-MuA" firstAttribute="leading" secondItem="C4m-pD-za7" secondAttribute="leading" constant="30" id="hMT-Ys-w09"/>
-                            <constraint firstItem="c1j-m3-hXp" firstAttribute="leading" secondItem="C4m-pD-za7" secondAttribute="leading" id="qZI-Hj-RMI"/>
-                            <constraint firstItem="gJh-dU-MuA" firstAttribute="top" secondItem="NBX-Aq-zA7" secondAttribute="top" constant="10" id="sOZ-hc-RG7"/>
-                            <constraint firstItem="gJh-dU-MuA" firstAttribute="centerX" secondItem="C4m-pD-za7" secondAttribute="centerX" id="xv3-CR-5Fv"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1ml-SK-f1i"/>
-                    <connections>
-                        <outlet property="image" destination="Jxv-MU-gFU" id="JTN-uk-Bkg"/>
-                        <outlet property="name" destination="Gin-ai-koI" id="oxE-Ih-I62"/>
-                        <outlet property="recip" destination="08O-3s-vpv" id="cVW-3l-jdQ"/>
-                    </connections>
+                    <size key="freeformSize" width="414" height="1100"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhL-b0-uYG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957.9710144927537" y="114.50892857142857"/>
+            <point key="canvasLocation" x="1990" y="739"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="M2q-qv-RX7">
+            <objects>
+                <tableViewController id="wHj-MO-JnT" customClass="TableViewController" customModule="CocktailShaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RvJ-E3-exW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="separatorColor" red="0.094117647060000004" green="0.1137254902" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.4039215686" green="0.53725490200000003" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="SCg-MN-pt8" userLabel="CellTitle">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SCg-MN-pt8" id="iXi-nW-rNw">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Margarita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWF-d1-Q6a">
+                                            <rect key="frame" x="152" y="5" width="110" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellImage" id="fBI-0z-QM2">
+                                <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fBI-0z-QM2" id="7Zi-MU-9fP">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wHj-MO-JnT" id="yDq-Wc-dat"/>
+                            <outlet property="delegate" destination="wHj-MO-JnT" id="rMd-SJ-wOj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Gyi-1X-Hjr"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hf9-zu-rBk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1994" y="-43"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="pEc-FW-IGX">
+            <objects>
+                <tableViewController modalTransitionStyle="flipHorizontal" id="uKY-zC-8L1" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2f0-8i-VX0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" id="fzI-J1-jBe">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HG8-Ji-lod">
+                                <rect key="frame" x="0.0" y="924" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HG8-Ji-lod" id="bpI-s9-MV3">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uKY-zC-8L1" id="G1n-I1-jNx"/>
+                            <outlet property="delegate" destination="uKY-zC-8L1" id="ch8-CS-98I"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="UTF-n9-9wR"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="98J-NC-NPK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2895" y="97"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4pL-d3-DdL">

@@ -15,5 +15,7 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func shakeButton(_ sender: UIButton) {
+    }
 }
 
