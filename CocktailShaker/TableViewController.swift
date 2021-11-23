@@ -24,23 +24,45 @@ class TableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 4
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        
+        if indexPath.row < 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CellTitle", for: indexPath)
+            
+            return cell
+        }
+        if indexPath.row < 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CellImage", for: indexPath)
+            
+            return cell
+        }
+        if indexPath.row < 3 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CellTitle", for: indexPath)
+            
+            return cell
+        }
+        if indexPath.row < 4 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CellDescription", for: indexPath)
+            
+            return cell
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CellTitle", for: indexPath)
 
-        // Configure the cell...
+
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
