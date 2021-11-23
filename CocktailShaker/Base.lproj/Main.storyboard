@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,15 +31,34 @@
                                     <segue destination="qKK-mk-2B0" kind="show" id="YKp-yz-F6r"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake your phone and get random cocktail recipe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2R-lE-QMG">
+                                <rect key="frame" x="45" y="622" width="324" height="55"/>
+                                <color key="backgroundColor" red="0.4039215686" green="0.53725490200000003" blue="0.51372549020000002" alpha="0.3807255993150685" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="zOh-ar-mqr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.90196078430000004" green="0.86666666670000003" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="h2R-lE-QMG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2LU-Ek-Bwe"/>
                             <constraint firstAttribute="bottom" secondItem="3oH-Ky-tfj" secondAttribute="bottom" id="2fC-Xk-F8Q"/>
+                            <constraint firstItem="h2R-lE-QMG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="83O-kU-OOC"/>
                             <constraint firstItem="3oH-Ky-tfj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AZR-2n-hlg"/>
+                            <constraint firstItem="h2R-lE-QMG" firstAttribute="top" secondItem="ydG-Ae-mCS" secondAttribute="bottom" constant="90" id="GUy-At-ATs"/>
                             <constraint firstItem="3oH-Ky-tfj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="H4s-PZ-QG2"/>
                             <constraint firstItem="ydG-Ae-mCS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LDA-OR-GSE"/>
                             <constraint firstItem="3oH-Ky-tfj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="ThP-bm-OaU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h2R-lE-QMG" secondAttribute="trailing" constant="45" id="ns3-dS-AFz"/>
                             <constraint firstItem="ydG-Ae-mCS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pWs-KJ-80e"/>
                         </constraints>
                     </view>
@@ -61,21 +81,89 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="c1j-m3-hXp">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="gJh-dU-MuA">
+                                <rect key="frame" x="30" y="150" width="354" height="692"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Margarita" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gin-ai-koI" userLabel="Name">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="34.5"/>
+                                        <color key="backgroundColor" red="0.4039215686" green="0.53725490200000003" blue="0.51372549020000002" alpha="0.38072559929999999" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
+                                        <color key="textColor" red="0.90196078430000004" green="0.86666666670000003" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jxv-MU-gFU" userLabel="Image">
+                                        <rect key="frame" x="0.0" y="61.5" width="354" height="219"/>
+                                    </imageView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YW6-Fz-crI" userLabel="Collection Ingridients">
+                                        <rect key="frame" x="0.0" y="307.5" width="354" height="148.5"/>
+                                        <color key="backgroundColor" red="0.4039215686" green="0.53725490200000003" blue="0.51372549020000002" alpha="0.68415560789999996" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="148.5" id="EJL-dh-4iS"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VvO-f4-Whb">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nEm-EA-m2b">
+                                                <rect key="frame" x="0.0" y="10.5" width="128" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6WM-xh-UKD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08O-3s-vpv" userLabel="Description">
+                                        <rect key="frame" x="0.0" y="483" width="354" height="209"/>
+                                        <color key="backgroundColor" red="0.4039215686" green="0.53725490200000003" blue="0.51372549020000002" alpha="0.38072559929999999" colorSpace="calibratedRGB"/>
+                                        <string key="text">Rub the rim of the glass with the lime slice to make the salt stick to it.
+Take care to moisten only the outer rim and sprinkle the salt on it.
+The salt should present to the lips of the imbiber and never mix into the cocktail.
+Shake the other ingredients with ice, then carefully pour into the glass.
+</string>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                        <color key="textColor" red="0.90196078430000004" green="0.86666666670000003" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Jxv-MU-gFU" firstAttribute="top" secondItem="Gin-ai-koI" secondAttribute="bottom" constant="27" id="7PE-zY-LLc"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NBX-Aq-zA7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gJh-dU-MuA" secondAttribute="trailing" constant="30" id="ELx-ed-vHq"/>
                             <constraint firstAttribute="bottom" secondItem="c1j-m3-hXp" secondAttribute="bottom" id="IRh-1m-VmF"/>
+                            <constraint firstItem="NBX-Aq-zA7" firstAttribute="bottom" secondItem="gJh-dU-MuA" secondAttribute="bottom" constant="20" id="ZA0-dq-IlR"/>
                             <constraint firstItem="c1j-m3-hXp" firstAttribute="trailing" secondItem="C4m-pD-za7" secondAttribute="trailing" id="awW-M7-F2Y"/>
                             <constraint firstItem="c1j-m3-hXp" firstAttribute="top" secondItem="C4m-pD-za7" secondAttribute="top" id="b7O-bY-Hab"/>
+                            <constraint firstItem="gJh-dU-MuA" firstAttribute="leading" secondItem="C4m-pD-za7" secondAttribute="leading" constant="30" id="hMT-Ys-w09"/>
                             <constraint firstItem="c1j-m3-hXp" firstAttribute="leading" secondItem="C4m-pD-za7" secondAttribute="leading" id="qZI-Hj-RMI"/>
+                            <constraint firstItem="gJh-dU-MuA" firstAttribute="top" secondItem="NBX-Aq-zA7" secondAttribute="top" constant="10" id="sOZ-hc-RG7"/>
+                            <constraint firstItem="gJh-dU-MuA" firstAttribute="centerX" secondItem="C4m-pD-za7" secondAttribute="centerX" id="xv3-CR-5Fv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1ml-SK-f1i"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhL-b0-uYG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1959" y="115"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="114.50892857142857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4pL-d3-DdL">
@@ -91,6 +179,7 @@
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" red="0.90196078430000004" green="0.86666666670000003" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>

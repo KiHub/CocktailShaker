@@ -11,7 +11,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "It’s random cocktail shaker"
+        title = "It’s shaker"
     }
 
 

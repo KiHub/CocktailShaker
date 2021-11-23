@@ -12,7 +12,7 @@ class RecipeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Today you should try:"
+        title = "Especially for you:"
     }
     
 
