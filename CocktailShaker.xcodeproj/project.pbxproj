@@ -13,11 +13,10 @@
 		0B0DB8A1274C491000469004 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0DB89F274C491000469004 /* Main.storyboard */; };
 		0B0DB8A3274C491300469004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B0DB8A2274C491300469004 /* Assets.xcassets */; };
 		0B0DB8A6274C491300469004 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0DB8A4274C491300469004 /* LaunchScreen.storyboard */; };
-		0B0DB8B0274CEEE400469004 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0DB8AF274CEEE400469004 /* RecipeViewController.swift */; };
-		0B0DB8B3274D28C400469004 /* RecipeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0DB8B2274D28C400469004 /* RecipeTable.swift */; };
 		0B0DB8B6274D546100469004 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0DB8B5274D546100469004 /* TableViewController.swift */; };
 		0B0DB8BD274E4C3D00469004 /* IngridientsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0DB8BC274E4C3D00469004 /* IngridientsCollectionViewCell.swift */; };
 		0B0DB8C1274E578900469004 /* IngridientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0DB8C0274E578900469004 /* IngridientsTableViewCell.swift */; };
+		0B3433DA274EE1C400AD6A78 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3433D9274EE1C400AD6A78 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +28,10 @@
 		0B0DB8A2274C491300469004 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B0DB8A5274C491300469004 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B0DB8A7274C491300469004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0B0DB8AF274CEEE400469004 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
-		0B0DB8B2274D28C400469004 /* RecipeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTable.swift; sourceTree = "<group>"; };
 		0B0DB8B5274D546100469004 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		0B0DB8BC274E4C3D00469004 /* IngridientsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsCollectionViewCell.swift; sourceTree = "<group>"; };
 		0B0DB8C0274E578900469004 /* IngridientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsTableViewCell.swift; sourceTree = "<group>"; };
+		0B3433D9274EE1C400AD6A78 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +67,7 @@
 				0B0DB899274C491000469004 /* AppDelegate.swift */,
 				0B0DB89B274C491000469004 /* SceneDelegate.swift */,
 				0B0DB89D274C491000469004 /* ViewController.swift */,
-				0B0DB8AF274CEEE400469004 /* RecipeViewController.swift */,
-				0B0DB8B2274D28C400469004 /* RecipeTable.swift */,
+				0B3433D9274EE1C400AD6A78 /* Model.swift */,
 				0B0DB8B5274D546100469004 /* TableViewController.swift */,
 				0B0DB8C0274E578900469004 /* IngridientsTableViewCell.swift */,
 				0B0DB8BC274E4C3D00469004 /* IngridientsCollectionViewCell.swift */,
@@ -152,10 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B0DB8B0274CEEE400469004 /* RecipeViewController.swift in Sources */,
+				0B3433DA274EE1C400AD6A78 /* Model.swift in Sources */,
 				0B0DB8B6274D546100469004 /* TableViewController.swift in Sources */,
 				0B0DB89E274C491000469004 /* ViewController.swift in Sources */,
-				0B0DB8B3274D28C400469004 /* RecipeTable.swift in Sources */,
 				0B0DB8C1274E578900469004 /* IngridientsTableViewCell.swift in Sources */,
 				0B0DB8BD274E4C3D00469004 /* IngridientsCollectionViewCell.swift in Sources */,
 				0B0DB89A274C491000469004 /* AppDelegate.swift in Sources */,

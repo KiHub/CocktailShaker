@@ -12,8 +12,10 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var mainImage: UIImageView!
+    
     @IBOutlet weak var ingridientImage: UIImageView!
     @IBOutlet weak var ingridirntCount: UILabel!
+
     @IBOutlet weak var fullRecipe: UILabel!
     
     
