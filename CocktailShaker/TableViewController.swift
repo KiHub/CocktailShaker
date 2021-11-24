@@ -13,6 +13,7 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
         title = "Especially for you:"
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -38,6 +39,7 @@ class TableViewController: UITableViewController {
         if indexPath.row < 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellTitle", for: indexPath)
             
+            
             return cell
         }
         if indexPath.row < 2 {
@@ -58,7 +60,7 @@ class TableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellTitle", for: indexPath)
 
-
+        
 
         return cell
     }
