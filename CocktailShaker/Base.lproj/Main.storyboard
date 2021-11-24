@@ -217,7 +217,7 @@ Shake the other ingredients with ice, then carefully pour into the glass.</strin
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rC-kZ-1ch">
-                                            <rect key="frame" x="50" y="13" width="314" height="186.5"/>
+                                            <rect key="frame" x="30" y="13" width="354" height="186.5"/>
                                             <string key="text">Rub the rim of the glass with the lime slice to make the salt stick to it.
 Take care to moisten only the outer rim and sprinkle the salt on it.
 The salt should present to the lips of the imbiber and never mix into the cocktail.
@@ -229,9 +229,9 @@ Shake the other ingredients with ice, then carefully pour into the glass.</strin
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="7rC-kZ-1ch" firstAttribute="centerX" secondItem="vSA-Fg-ZbA" secondAttribute="centerX" id="0yj-9N-vuJ"/>
-                                        <constraint firstItem="7rC-kZ-1ch" firstAttribute="leading" secondItem="vSA-Fg-ZbA" secondAttribute="leadingMargin" constant="30" id="9QP-5r-9kh"/>
                                         <constraint firstItem="7rC-kZ-1ch" firstAttribute="centerX" secondItem="vSA-Fg-ZbA" secondAttribute="centerX" id="Bo2-2I-KtC"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="7rC-kZ-1ch" secondAttribute="trailing" constant="30" id="jUi-KN-Yjz"/>
+                                        <constraint firstAttribute="trailing" secondItem="7rC-kZ-1ch" secondAttribute="trailing" constant="30" id="CD6-BW-g3C"/>
+                                        <constraint firstItem="7rC-kZ-1ch" firstAttribute="leading" secondItem="vSA-Fg-ZbA" secondAttribute="leading" constant="30" id="nkM-vN-zcN"/>
                                         <constraint firstItem="7rC-kZ-1ch" firstAttribute="top" secondItem="vSA-Fg-ZbA" secondAttribute="topMargin" constant="2" id="vgy-VJ-TKZ"/>
                                         <constraint firstItem="7rC-kZ-1ch" firstAttribute="bottom" secondItem="vSA-Fg-ZbA" secondAttribute="bottomMargin" constant="2" id="ysE-M8-U04"/>
                                     </constraints>
