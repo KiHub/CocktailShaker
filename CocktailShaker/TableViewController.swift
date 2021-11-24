@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, UICollectionViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,10 +48,10 @@ class TableViewController: UITableViewController {
             return cell
         }
         if indexPath.row < 3 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CellIngridients", for: indexPath) 
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CellIngridients", for: indexPath) as? IngridientsTableViewCell
+            cell?.regisrerCollectionView(datasource: self)
             
-            
-            return cell
+            return cell!
         }
         if indexPath.row < 4 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellDescription", for: indexPath)
@@ -113,4 +113,15 @@ class TableViewController: UITableViewController {
     }
     */
 
+}
+
+extension TableViewController {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCellIngridients", for: indexPath) as? IngridientsCollectionViewCell
+        return cell!
+        
+    }
 }

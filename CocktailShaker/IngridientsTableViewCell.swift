@@ -9,6 +9,8 @@ import UIKit
 
 class IngridientsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,7 +23,8 @@ class IngridientsTableViewCell: UITableViewCell {
     }
     
     func regisrerCollectionView<DataSource:UICollectionViewDataSource>(datasource:DataSource) {
-        <#function body#>
+        self.collectionView.dataSource = datasource
+        
     }
 
 }

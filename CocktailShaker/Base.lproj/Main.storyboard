@@ -213,10 +213,10 @@ Shake the other ingredients with ice, then carefully pour into the glass.</strin
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <visualEffectView opaque="NO" alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3a-Lh-nbm">
-                                            <rect key="frame" x="30" y="0.0" width="354" height="43.5"/>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E3a-Lh-nbm">
+                                            <rect key="frame" x="30" y="0.0" width="354" height="100"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ScS-Pn-ayh">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="43.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mrf-RX-93z">
@@ -281,6 +281,9 @@ Shake the other ingredients with ice, then carefully pour into the glass.</strin
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="collectionView" destination="Mrf-RX-93z" id="tUY-2T-uXj"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellDescription" id="kcW-kh-oXB">
                                 <rect key="frame" x="0.0" y="519.5" width="414" height="208.5"/>
