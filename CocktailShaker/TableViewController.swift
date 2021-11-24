@@ -9,6 +9,14 @@ import UIKit
 
 class TableViewController: UITableViewController, UICollectionViewDataSource {
 
+    
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var mainImage: UIImageView!
+    @IBOutlet weak var ingridientImage: UIImageView!
+    @IBOutlet weak var ingridirntCount: UILabel!
+    @IBOutlet weak var fullRecipe: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundView = UIImageView(image: UIImage(named: "background"))

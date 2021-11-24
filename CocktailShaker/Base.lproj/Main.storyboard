@@ -66,6 +66,10 @@
                     <navigationItem key="navigationItem" id="e4p-Hc-fTE">
                         <barButtonItem key="backBarButtonItem" title=" " id="Kdh-wz-eDA"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="instructionLabel" destination="h2R-lE-QMG" id="jfO-gO-bZx"/>
+                        <outlet property="shake" destination="ydG-Ae-mCS" id="YFv-r5-JvO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -336,6 +340,13 @@ Shake the other ingredients with ice, then carefully pour into the glass.</strin
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Gyi-1X-Hjr"/>
+                    <connections>
+                        <outlet property="fullRecipe" destination="7rC-kZ-1ch" id="KuS-ni-T9g"/>
+                        <outlet property="ingridientImage" destination="fJZ-EN-YrN" id="cIL-lz-zFw"/>
+                        <outlet property="ingridirntCount" destination="bIp-9c-wQV" id="bME-mm-4eO"/>
+                        <outlet property="mainImage" destination="ffa-rR-fqI" id="4uD-zo-CAs"/>
+                        <outlet property="name" destination="aWF-d1-Q6a" id="eJE-6T-3lW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hf9-zu-rBk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
