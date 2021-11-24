@@ -48,7 +48,8 @@ class TableViewController: UITableViewController {
             return cell
         }
         if indexPath.row < 3 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CellTitle", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CellIngridients", for: indexPath) 
+            
             
             return cell
         }
@@ -65,6 +66,7 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+   
 
     /*
     // Override to support conditional editing of the table view.
