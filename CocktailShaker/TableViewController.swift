@@ -18,11 +18,14 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
 
     @IBOutlet weak var fullRecipe: UILabel!
     
+    var coctailManager = CoctailManager()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
         title = "Especially for you:"
+        coctailManager.getNewCoctail()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -48,13 +51,13 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
         
         if indexPath.row < 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellTitle", for: indexPath)
-            
+           
             
             return cell
         }
         if indexPath.row < 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellImage", for: indexPath)
-            
+         //   cell.imageView?.image = UIImage(named: "TequilaS")
             return cell
         }
         if indexPath.row < 3 {
@@ -135,3 +138,41 @@ extension TableViewController {
         
     }
 }
+
+//
+//extension TableViewController {
+//    
+//    func getNewCoctail() {
+//        
+//        let urlString = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
+//        if let url = URL(string: urlString) {
+//            let session = URLSession(configuration: .default)
+//            let task = session.dataTask(with: url) { (data, response, error) in
+//         
+//                
+//                if let safeData = data {
+//                    let dataString = String(data: safeData, encoding: .utf8)
+//                    print(dataString!)
+//                }
+//            }
+//            task.resume()
+//        }
+//    }
+//    
+//    func parseJSON(_ data: Data) -> [DrinksResults] {
+//
+//        let decoder = JSONDecoder()
+//        do {
+//            let decodedData = try decoder.decode(DrinksResults.self, from: data)
+//
+//            let coctailName = decodedData.drinks
+//            print(coctailName)
+//            return coctailName
+//
+//        } catch {
+//           // delegate?.didFailWithError(error: error)
+//            return error
+//        }
+//    }
+    
+

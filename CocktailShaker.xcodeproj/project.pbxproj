@@ -17,6 +17,7 @@
 		0B0DB8BD274E4C3D00469004 /* IngridientsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0DB8BC274E4C3D00469004 /* IngridientsCollectionViewCell.swift */; };
 		0B0DB8C1274E578900469004 /* IngridientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0DB8C0274E578900469004 /* IngridientsTableViewCell.swift */; };
 		0B3433DA274EE1C400AD6A78 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3433D9274EE1C400AD6A78 /* Model.swift */; };
+		0B3433DE274EF49C00AD6A78 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3433DD274EF49C00AD6A78 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		0B0DB8BC274E4C3D00469004 /* IngridientsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsCollectionViewCell.swift; sourceTree = "<group>"; };
 		0B0DB8C0274E578900469004 /* IngridientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsTableViewCell.swift; sourceTree = "<group>"; };
 		0B3433D9274EE1C400AD6A78 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		0B3433DD274EF49C00AD6A78 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				0B0DB89B274C491000469004 /* SceneDelegate.swift */,
 				0B0DB89D274C491000469004 /* ViewController.swift */,
 				0B3433D9274EE1C400AD6A78 /* Model.swift */,
+				0B3433DD274EF49C00AD6A78 /* Data.swift */,
 				0B0DB8B5274D546100469004 /* TableViewController.swift */,
 				0B0DB8C0274E578900469004 /* IngridientsTableViewCell.swift */,
 				0B0DB8BC274E4C3D00469004 /* IngridientsCollectionViewCell.swift */,
@@ -156,6 +159,7 @@
 				0B0DB8BD274E4C3D00469004 /* IngridientsCollectionViewCell.swift in Sources */,
 				0B0DB89A274C491000469004 /* AppDelegate.swift in Sources */,
 				0B0DB89C274C491000469004 /* SceneDelegate.swift in Sources */,
+				0B3433DE274EF49C00AD6A78 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
