@@ -38,8 +38,10 @@ import Foundation
 //}
 
 struct CocktailResults: Codable {
-    let strDrink: String?
-   // let strInstructions: String?
+   
+    
+    let strDrink: String
+    let strInstructions: String
 //let drinkName: String?
 //let imageString: String?
 //let ingredient1: String?
@@ -96,8 +98,17 @@ struct CocktailResults: Codable {
 
 struct CurrentCoctail: Codable {
     let drinks: [CocktailResults]
-  //let strDrink: String  let drinkName = CocktailResults[0]
+    
     
     
 }
 
+//class Drinks {
+//    struct Returned: Codable, Decodable {
+//        var drinks: [Drink]
+//    }
+//    struct Drink {
+//        var strDrink = ""
+//        
+//    }
+//}
