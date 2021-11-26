@@ -7,6 +7,8 @@
 
 import Foundation
 var drinkArray: [CocktailResults] = []
+var drinks = [Drink]()
+
 struct CoctailManager {
     func getNewCoctail() {
         
@@ -20,7 +22,7 @@ struct CoctailManager {
                 
                 if let safeData = data {
                     self.parseJson(with: safeData)
-                  // drinkArray = drinkArray + current
+                   
                    
                 }
             }
@@ -30,12 +32,22 @@ struct CoctailManager {
     func parseJson(with data: Data)  {
         let decoder = JSONDecoder()
         do {
-        let currentCoctailData = try decoder.decode(CurrentCoctail.self, from: data)
+        
+            drinks = try decoder.decode(Drinks.self, from: data).drinks
+          //  print(  cocktailResults.yourDrinks.strDrink)
+          //  print(cocktailResults.drinks)
+            print("Hey", drinks)
+            print(drinks.count)
+         //   print(Drink.init(strDrink: drinks)
+        // print(drinks[section].strDrink)
+            
           //  print("Heyhey", currentCoctailData.strDrink ?? "Error")
-            drinkArray = drinkArray + currentCoctailData.drinks
+          //  drinkArray = drinkArray + currentCoctailData.drinks
           //  print(currentCoctailData.drinks)
           //  print(currentCoctailData.drinks)
-            print(drinkArray)
+            
+         //   print(currentCoctailData.)
+          //  print(drinkArray)
             
         } catch let error as NSError {
             print(error.localizedDescription)
