@@ -12,43 +12,57 @@ import UIKit
 
 
 struct CoctailManager {
-    class Drinks  {
-        struct Returned: Codable {
-            var drinks: [Drink]
-            
-        }
-        struct Drink: Codable {
-            var strDrink = ""
-           // var strDrinkThumb: String?
-            //   var strInstructions: String?
-        }
-        //var drinkArray: [Drink] = []
-        
-    }
+  //  var returned = CocktailResults.
+    
+  //  var gkass: CocktailResults
+    
+    var onCompletion: ((CocktailResults) -> Void)?
+//    class Drinks  {
+//        struct Returned: Codable {
+//            var drinks: [Drink]
+//            
+//        }
+//        struct Drink: Codable {
+//            var strDrink = ""
+//           // var strDrinkThumb: String?
+//            //   var strInstructions: String?
+//        }
+//        //var drinkArray: [Drink] = []
+//        
+//    }
     func getNewCoctail() {
+        
+        
         
         let urlString = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
         
         
         guard let url = URL(string: urlString) else { return }
             let session = URLSession(configuration: .default)
-            let task = session.dataTask(with: url) { (data, response, error) in
+        let task = session.dataTask(with: url) { (data, response, error) in
          
                 
                 if let safeData = data {
-                    self.parseJson(with: safeData)
+                 self.parseJson(with: safeData)
+                  
+                    
+               //     self.onCompletion?(gkass)
+                    
+                 //  var newCoctail =
+                    }
                    
-                   
-                }
+                
             }.resume()
             
         
 }
-    func parseJson(with data: Data)  {
+        func parseJson(with data: Data)  {
         let decoder = JSONDecoder()
         do {
         
-            let returned = try decoder.decode(DrinksResults.self, from: data)
+          let  gkass =  try decoder.decode(DrinksResults.self, from: data).drinks
+            print(  "Here! \(gkass.drinkName) " )
+            self.onCompletion?(gkass)
           //  print(  cocktailResults.yourDrinks.strDrink)
           //  print(cocktailResults.drinks)
           //  drinks
@@ -58,7 +72,7 @@ struct CoctailManager {
           //  print(drinkArray)
           //  print(drinkArray.count)
         //    completion(.success(self.cocktailResults!))
-            print(returned.drinks)
+         //   print(returned.count)
             
          //   print(Drink.init(strDrink: drinks)
         // print(drinks[section].strDrink)

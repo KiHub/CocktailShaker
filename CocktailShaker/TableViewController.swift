@@ -10,6 +10,8 @@ import UIKit
 class TableViewController: UITableViewController, UICollectionViewDataSource {
 
     
+
+    
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var mainImage: UIImageView!
     
@@ -25,8 +27,16 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
         super.viewDidLoad()
         tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
         title = "Especially for you:"
-        coctailManager.getNewCoctail()
+       
+        coctailManager.onCompletion = { gkass in
+            print(gkass.instructions)
+        }
         
+        
+            
+        
+      //  coctailManager.getNewCoctail(completionHandler: <#([CocktailResults]) -> Void#>)
+      //  coctailManager.
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -175,4 +185,5 @@ extension TableViewController {
 //        }
 //    }
     
+
 
