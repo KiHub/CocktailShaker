@@ -5,11 +5,26 @@
 //  Created by  Mr.Ki on 24.11.2021.
 //
 
-import Foundation
-var drinkArray: [CocktailResults] = []
-var drinks = [Drink]()
+import UIKit
+
+//var drinks = [Drink]()
+
+
 
 struct CoctailManager {
+    class Drinks  {
+        struct Returned: Codable {
+            var drinks: [Drink]
+            
+        }
+        struct Drink: Codable {
+            var strDrink = ""
+           // var strDrinkThumb: String?
+            //   var strInstructions: String?
+        }
+        //var drinkArray: [Drink] = []
+        
+    }
     func getNewCoctail() {
         
         let urlString = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
@@ -25,19 +40,26 @@ struct CoctailManager {
                    
                    
                 }
-            }
-            task.resume()
+            }.resume()
+            
         
 }
     func parseJson(with data: Data)  {
         let decoder = JSONDecoder()
         do {
         
-            drinks = try decoder.decode(Drinks.self, from: data).drinks
+            let returned = try decoder.decode(DrinksResults.self, from: data)
           //  print(  cocktailResults.yourDrinks.strDrink)
           //  print(cocktailResults.drinks)
-            print("Hey", drinks)
-            print(drinks.count)
+          //  drinks
+        //    print("Hey", drinks)
+          //  print(drinks.count)
+         //   var drinkArray: [Drinks.Drink] = returned
+          //  print(drinkArray)
+          //  print(drinkArray.count)
+        //    completion(.success(self.cocktailResults!))
+            print(returned.drinks)
+            
          //   print(Drink.init(strDrink: drinks)
         // print(drinks[section].strDrink)
             

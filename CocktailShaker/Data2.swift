@@ -8,27 +8,38 @@
 import Foundation
 
 
-
-struct Drinks: Decodable {
-    var drinks: [Drink]
+class Drinks  {
+    struct Returned: Codable {
+        var drinks: [Drink]
+        
+    }
+    struct Drink: Codable {
+        var strDrink = ""
+    }
+    var drinkArray: [Drink] = []
+    
 }
 
-struct Drink: Decodable {
-    var strDrink: String?
-    var strDrinkThumb: String?
-    var strInstructions: String?
-}
+//struct Drinks: Decodable {
+//    var drinks: [Drink]
+//}
+//
+//struct Drink: Decodable {
+//    var strDrink: String?
+//    var strDrinkThumb: String?
+//    var strInstructions: String?
+//}
 
 
 
 
-
-struct CoctData: Decodable {
-    let drinks: [String]
-}
-struct DResults: Decodable {
-    let strInstructions: String
-}
+//
+//struct CoctData: Decodable {
+//    let drinks: [String]
+//}
+//struct DResults: Decodable {
+//    let strInstructions: String
+//}
 
 
 
