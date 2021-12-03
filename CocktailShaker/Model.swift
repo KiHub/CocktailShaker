@@ -6,17 +6,20 @@
 //
 
 import UIKit
+import Alamofire
 
 //var drinks = [Drink]()
 
+let key = "1f81e8e1"
 
+let randomNumber = Int.random(in: 0000000...4513678)
 
 struct CoctailManager {
   //  var returned = CocktailResults.
     
   //  var gkass: CocktailResults
     
-    var onCompletion: ((CocktailResults) -> Void)?
+  //  var onCompletion: ((CocktailResults) -> Void)?
 //    class Drinks  {
 //        struct Returned: Codable {
 //            var drinks: [Drink]
@@ -34,7 +37,7 @@ struct CoctailManager {
         
         
         
-        let urlString = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
+        let urlString = "http://www.omdbapi.com/?i=tt4513678&apikey=1f81e8e1"
         
         
         guard let url = URL(string: urlString) else { return }
@@ -60,9 +63,9 @@ struct CoctailManager {
         let decoder = JSONDecoder()
         do {
         
-          let  gkass =  try decoder.decode(DrinksResults.self, from: data).drinks
-            print(  "Here! \(gkass.drinkName) " )
-            self.onCompletion?(gkass)
+          let  movie =  try decoder.decode(Movie.self, from: data)
+            print(  "Here! \(movie.actors) " )
+         //   self.onCompletion?(gkass)
           //  print(  cocktailResults.yourDrinks.strDrink)
           //  print(cocktailResults.drinks)
           //  drinks

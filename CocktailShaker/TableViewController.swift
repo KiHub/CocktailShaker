@@ -28,9 +28,9 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
         tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
         title = "Especially for you:"
        
-        coctailManager.onCompletion = { gkass in
-            print(gkass.instructions)
-        }
+//        coctailManager.onCompletion = { gkass in
+//            print(gkass.instructions)
+//        }
         
         
             

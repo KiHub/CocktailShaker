@@ -19,6 +19,8 @@
 		0B3433DA274EE1C400AD6A78 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3433D9274EE1C400AD6A78 /* Model.swift */; };
 		0B3433DE274EF49C00AD6A78 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3433DD274EF49C00AD6A78 /* Data.swift */; };
 		0B3433E2274FFF2400AD6A78 /* Data2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3433E1274FFF2400AD6A78 /* Data2.swift */; };
+		0B3433F22759325A00AD6A78 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3433F12759325A00AD6A78 /* Movie.swift */; };
+		F0D105D603BD8A2476445FF8 /* Pods_CocktailShaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5332B358FDC869CCDEE581B2 /* Pods_CocktailShaker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,10 @@
 		0B3433D9274EE1C400AD6A78 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		0B3433DD274EF49C00AD6A78 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		0B3433E1274FFF2400AD6A78 /* Data2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data2.swift; sourceTree = "<group>"; };
+		0B3433F12759325A00AD6A78 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		5332B358FDC869CCDEE581B2 /* Pods_CocktailShaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocktailShaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4D3A7AE89A10CBC0E480E19 /* Pods-CocktailShaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailShaker.release.xcconfig"; path = "Target Support Files/Pods-CocktailShaker/Pods-CocktailShaker.release.xcconfig"; sourceTree = "<group>"; };
+		A814558CD1B8359013294A3B /* Pods-CocktailShaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailShaker.debug.xcconfig"; path = "Target Support Files/Pods-CocktailShaker/Pods-CocktailShaker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0D105D603BD8A2476445FF8 /* Pods_CocktailShaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +61,8 @@
 			children = (
 				0B0DB898274C491000469004 /* CocktailShaker */,
 				0B0DB897274C491000469004 /* Products */,
+				370470453E5B01E7910A4E34 /* Pods */,
+				D3AD1637549B7D83AE0388E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +83,7 @@
 				0B3433D9274EE1C400AD6A78 /* Model.swift */,
 				0B3433DD274EF49C00AD6A78 /* Data.swift */,
 				0B3433E1274FFF2400AD6A78 /* Data2.swift */,
+				0B3433F12759325A00AD6A78 /* Movie.swift */,
 				0B0DB8B5274D546100469004 /* TableViewController.swift */,
 				0B0DB8C0274E578900469004 /* IngridientsTableViewCell.swift */,
 				0B0DB8BC274E4C3D00469004 /* IngridientsCollectionViewCell.swift */,
@@ -85,6 +95,24 @@
 			path = CocktailShaker;
 			sourceTree = "<group>";
 		};
+		370470453E5B01E7910A4E34 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A814558CD1B8359013294A3B /* Pods-CocktailShaker.debug.xcconfig */,
+				A4D3A7AE89A10CBC0E480E19 /* Pods-CocktailShaker.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D3AD1637549B7D83AE0388E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5332B358FDC869CCDEE581B2 /* Pods_CocktailShaker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -92,9 +120,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B0DB8AA274C491300469004 /* Build configuration list for PBXNativeTarget "CocktailShaker" */;
 			buildPhases = (
+				8CEDEEA77731EE00A7783277 /* [CP] Check Pods Manifest.lock */,
 				0B0DB892274C491000469004 /* Sources */,
 				0B0DB893274C491000469004 /* Frameworks */,
 				0B0DB894274C491000469004 /* Resources */,
+				6AF1DF418038F0B14684E218 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -150,6 +180,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6AF1DF418038F0B14684E218 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CocktailShaker/Pods-CocktailShaker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CocktailShaker/Pods-CocktailShaker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CocktailShaker/Pods-CocktailShaker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CEDEEA77731EE00A7783277 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CocktailShaker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0B0DB892274C491000469004 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -159,6 +231,7 @@
 				0B0DB8B6274D546100469004 /* TableViewController.swift in Sources */,
 				0B0DB89E274C491000469004 /* ViewController.swift in Sources */,
 				0B0DB8C1274E578900469004 /* IngridientsTableViewCell.swift in Sources */,
+				0B3433F22759325A00AD6A78 /* Movie.swift in Sources */,
 				0B0DB8BD274E4C3D00469004 /* IngridientsCollectionViewCell.swift in Sources */,
 				0B0DB89A274C491000469004 /* AppDelegate.swift in Sources */,
 				0B3433E2274FFF2400AD6A78 /* Data2.swift in Sources */,
@@ -307,6 +380,7 @@
 		};
 		0B0DB8AB274C491300469004 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A814558CD1B8359013294A3B /* Pods-CocktailShaker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -327,6 +401,7 @@
 		};
 		0B0DB8AC274C491300469004 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4D3A7AE89A10CBC0E480E19 /* Pods-CocktailShaker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
