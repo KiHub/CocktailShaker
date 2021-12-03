@@ -20,14 +20,25 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
 
     @IBOutlet weak var fullRecipe: UILabel!
     
-    var coctailManager = CoctailManager()
+ //   var coctailManager = CoctailManager()
+    var movieGenerator = MovieGenarator()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
         title = "Especially for you:"
-       
+        
+        
+        
+        movieGenerator.onCompletion = { movie in
+            print(movie.title)
+            print("Hello")
+        }
+        movieGenerator.fetchMovieWithAlamofire()
+        
+       // fetchMovieWithAlamofire()
+        
 //        coctailManager.onCompletion = { gkass in
 //            print(gkass.instructions)
 //        }
@@ -61,7 +72,7 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
         
         if indexPath.row < 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellTitle", for: indexPath)
-           
+            
             
             return cell
         }
