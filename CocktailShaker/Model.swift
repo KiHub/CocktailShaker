@@ -14,11 +14,13 @@ import Alamofire
 
 // let randomNumber = Int.random(in: 0000000...4513678)
 
-
+protocol MovieGenaratorDelegate {
+    func updateTable(_: MovieGenarator, with movie: Movie)
+}
 
 struct MovieGenarator {
-    var onCompletion: ((Movie) -> Void)?
-
+//    var onCompletion: ((Movie) -> Void)?
+    var delegate: MovieGenaratorDelegate?
 
 func fetchMovieWithAlamofire() {
  
@@ -32,9 +34,11 @@ func fetchMovieWithAlamofire() {
        
     request.responseDecodable(of: Movie.self) { (response) in
         guard let movie = response.value else { return }
-    //    print(movie.title)
+        
+        self.delegate?.updateTable(self, with: movie)
+        print(movie.title)
      //   print(movie.actors)
-        self.onCompletion?(movie)
+       // self.onCompletion?(movie)
     }
 
 }

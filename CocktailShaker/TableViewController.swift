@@ -24,28 +24,31 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
     
  //   var coctailManager = CoctailManager()
     var movieGenerator = MovieGenarator()
-    var titleMovie = "55"
+    var titleMovie = "zzzz"
     var posterMovie = ""
+    var descriptionMovie = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+  //      movieGenerator.delegate = self
+      
         tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
-    //    title = "Especially for you:"
+        title = "Especially for you:"
+        
+        print("Title movie:\(titleMovie)")
         
         
         
-        
-        
-        movieGenerator.onCompletion = { movie in
-           // print(movie.title)
-            print("Hello")
-            self.titleMovie = movie.title
-            self.posterMovie = movie.poster
-            print(self.titleMovie)
-            
-            
-        }
-        movieGenerator.fetchMovieWithAlamofire()
+//        movieGenerator.onCompletion = { movie in
+//           // print(movie.title)
+//            print("Hello")
+//            self.titleMovie = movie.title
+//            self.posterMovie = movie.poster
+//            print(self.titleMovie)
+//            
+//            
+//        }
+     //   movieGenerator.fetchMovieWithAlamofire()
        
         
         
@@ -91,7 +94,11 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
 //            print("Hey", titleMovie)
   //      cell.title.text = titleMovie
           //  name.text = titleMovie
-            cell.title.text = "&&"
+     
+            cell.title.text = titleMovie
+                
+         
+        
             
             return cell
         }
@@ -217,3 +224,14 @@ extension TableViewController {
     
 
 
+//extension TableViewController: MovieGenaratorDelegate {
+//    func updateTable(_: MovieGenarator, with movie: Movie) {
+//        print("Delegate \(movie.actors)")
+//        titleMovie = movie.title
+//
+//
+//    }
+//
+//
+//
+//}
