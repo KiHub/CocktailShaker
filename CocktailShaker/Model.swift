@@ -32,8 +32,8 @@ func fetchMovieWithAlamofire() {
        
     request.responseDecodable(of: Movie.self) { (response) in
         guard let movie = response.value else { return }
-        print(movie.title)
-        print(movie.actors)
+    //    print(movie.title)
+     //   print(movie.actors)
         self.onCompletion?(movie)
     }
 

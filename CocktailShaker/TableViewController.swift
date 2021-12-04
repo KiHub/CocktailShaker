@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class TableViewController: UITableViewController, UICollectionViewDataSource {
 
     
@@ -29,7 +30,9 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
-        title = "Especially for you:"
+    //    title = "Especially for you:"
+        
+        
         
         
         
@@ -43,6 +46,8 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
             
         }
         movieGenerator.fetchMovieWithAlamofire()
+       
+        
         
       //  titleOutlet.text = titleMovie ?? ""
         
@@ -86,7 +91,7 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
 //            print("Hey", titleMovie)
   //      cell.title.text = titleMovie
           //  name.text = titleMovie
-            cell.setTitle()
+            cell.title.text = "&&"
             
             return cell
         }
