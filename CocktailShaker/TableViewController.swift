@@ -85,7 +85,7 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return 3
     }
 
     
@@ -131,13 +131,13 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
            // cell.posterMovie.image =
             return cell
         }
+//        if indexPath.row < 3 {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "CellIngridients", for: indexPath) as? IngridientsTableViewCell
+//            cell?.regisrerCollectionView(datasource: self)
+//
+//            return cell!
+//        }
         if indexPath.row < 3 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CellIngridients", for: indexPath) as? IngridientsTableViewCell
-            cell?.regisrerCollectionView(datasource: self)
-            
-            return cell!
-        }
-        if indexPath.row < 4 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellDescription", for: indexPath) as! PlotCell
             cell.plotText.text = plotMovie
             return cell
