@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import SDWebImage
 
 var titleFromMovie = ""
 var plotFromMovie = ""
@@ -71,9 +72,12 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tableVC = segue.destination as? TableViewController  else { return }
+        
+        
        tableVC.titleMovie = titleFromMovie
         tableVC.plotMovie = plotFromMovie
-        tableVC.posterMovie = imageFromMovie
+        tableVC.imageMovie = imageFromMovie
+        
     
         print("IMG",imageFromMovie)
     }

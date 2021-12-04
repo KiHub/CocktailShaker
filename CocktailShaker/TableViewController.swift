@@ -26,7 +26,7 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
     var movieGenerator = MovieGenarator()
     var titleMovie = "zzzz"
     var plotMovie = ""
-    var posterMovie = ""
+    var imageMovie = ""
     var descriptionMovie = ""
     
     override func viewDidLoad() {
@@ -36,7 +36,7 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
         tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
         title = "Especially for you:"
         
-        print("Title movie:\(titleMovie)")
+        
        
         
         
@@ -101,7 +101,7 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
      
             cell.title.text = titleMovie
                 
-         
+          
         
             
             return cell
@@ -109,8 +109,23 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
         if indexPath.row < 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellImage", for: indexPath) as! ImageCell
        //     cell.imageView?.image = UIImage(data: poster)
-            print("Poster", posterMovie)
-            cell.posterMovie.image = UIImage(named: "shakerBeige")
+         //   print("Poster", posterMovie)
+            
+            let myImageViewe: UIImageView = {
+                let myImageViewe = UIImageView(frame: CGRect(x: 0, y: 0, width: 350, height: 450))
+                myImageViewe.contentMode = .scaleAspectFit
+                myImageViewe.clipsToBounds = true
+                return myImageViewe
+            }()
+            
+            
+                      guard let url = URL(string: imageMovie) else { return cell }
+            myImageViewe.center = cell.center
+                      myImageViewe.sd_setImage(with: url, completed: nil)
+                      cell.addSubview(myImageViewe)
+         //   myImageViewe.layer.bounds.width = view.layer.wid
+            
+           // cell.posterMovie.image = UIImage(named: "shakerBeige")
             
 //            cell.posterMovie.sd_setImage(with: URL(string: "https://m.media-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_SX300.jpg"), completed: nil)
            // cell.posterMovie.image =

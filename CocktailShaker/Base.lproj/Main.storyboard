@@ -141,7 +141,7 @@
                                     <outlet property="posterMovie" destination="ffa-rR-fqI" id="YWS-ix-BQk"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellIngridients" id="NhB-sS-MUZ" customClass="IngridientsTableViewCell" customModule="CocktailShaker" customModuleProvider="target">
+                            <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellIngridients" id="NhB-sS-MUZ" customClass="IngridientsTableViewCell" customModule="CocktailShaker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="476" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NhB-sS-MUZ" id="M9l-Tu-buq">
