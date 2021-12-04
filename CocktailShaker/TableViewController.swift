@@ -25,6 +25,7 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
  //   var coctailManager = CoctailManager()
     var movieGenerator = MovieGenarator()
     var titleMovie = "zzzz"
+    var plotMovie = ""
     var posterMovie = ""
     var descriptionMovie = ""
     
@@ -103,8 +104,9 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
             return cell
         }
         if indexPath.row < 2 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CellImage", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CellImage", for: indexPath) as! ImageCell
        //     cell.imageView?.image = UIImage(data: poster)
+            cell.posterMovie.image = UIImage(data: posterMovie)
             return cell
         }
         if indexPath.row < 3 {
@@ -114,8 +116,8 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
             return cell!
         }
         if indexPath.row < 4 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CellDescription", for: indexPath)
-            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CellDescription", for: indexPath) as! PlotCell
+            cell.plotText.text = plotMovie
             return cell
         }
         

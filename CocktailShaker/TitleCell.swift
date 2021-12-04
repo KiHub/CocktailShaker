@@ -6,11 +6,10 @@
 //
 
 import UIKit
-import Alamofire
 
 class TitleCell: UITableViewCell {
 
-    var movieGenerator = MovieGenarator()
+  
     
     @IBOutlet weak var title: UILabel!
     

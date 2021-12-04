@@ -110,7 +110,7 @@
                                     <outlet property="title" destination="aWF-d1-Q6a" id="cYc-fT-TQu"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellImage" id="fBI-0z-QM2">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellImage" id="fBI-0z-QM2" customClass="ImageCell" customModule="CocktailShaker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="414" height="404"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fBI-0z-QM2" id="7Zi-MU-9fP">
@@ -137,6 +137,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="posterMovie" destination="ffa-rR-fqI" id="YWS-ix-BQk"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellIngridients" id="NhB-sS-MUZ" customClass="IngridientsTableViewCell" customModule="CocktailShaker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="476" width="414" height="150"/>
@@ -234,7 +237,7 @@
                                     <outlet property="collectionView" destination="Mrf-RX-93z" id="RtY-tO-xNR"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellDescription" id="kcW-kh-oXB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellDescription" id="kcW-kh-oXB" customClass="PlotCell" customModule="CocktailShaker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="626" width="414" height="208"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kcW-kh-oXB" id="vSA-Fg-ZbA">
@@ -262,6 +265,9 @@ Shake the other ingredients with ice, then carefully pour into the glass.</strin
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="plotText" destination="7rC-kZ-1ch" id="9nL-ch-gxm"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
