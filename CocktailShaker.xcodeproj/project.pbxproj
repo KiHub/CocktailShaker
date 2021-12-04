@@ -21,6 +21,7 @@
 		0B3433E2274FFF2400AD6A78 /* Data2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3433E1274FFF2400AD6A78 /* Data2.swift */; };
 		0B3433F22759325A00AD6A78 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3433F12759325A00AD6A78 /* Movie.swift */; };
 		0B343424275ABA3900AD6A78 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B343423275ABA3900AD6A78 /* Constant.swift */; };
+		0B343427275AD44200AD6A78 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B343426275AD44200AD6A78 /* TitleCell.swift */; };
 		F0D105D603BD8A2476445FF8 /* Pods_CocktailShaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5332B358FDC869CCDEE581B2 /* Pods_CocktailShaker.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		0B3433E1274FFF2400AD6A78 /* Data2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data2.swift; sourceTree = "<group>"; };
 		0B3433F12759325A00AD6A78 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		0B343423275ABA3900AD6A78 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		0B343426275AD44200AD6A78 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		5332B358FDC869CCDEE581B2 /* Pods_CocktailShaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocktailShaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D3A7AE89A10CBC0E480E19 /* Pods-CocktailShaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailShaker.release.xcconfig"; path = "Target Support Files/Pods-CocktailShaker/Pods-CocktailShaker.release.xcconfig"; sourceTree = "<group>"; };
 		A814558CD1B8359013294A3B /* Pods-CocktailShaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailShaker.debug.xcconfig"; path = "Target Support Files/Pods-CocktailShaker/Pods-CocktailShaker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				0B0DB8B5274D546100469004 /* TableViewController.swift */,
 				0B343423275ABA3900AD6A78 /* Constant.swift */,
 				0B0DB8C0274E578900469004 /* IngridientsTableViewCell.swift */,
+				0B343426275AD44200AD6A78 /* TitleCell.swift */,
 				0B0DB8BC274E4C3D00469004 /* IngridientsCollectionViewCell.swift */,
 				0B0DB89F274C491000469004 /* Main.storyboard */,
 				0B0DB8A2274C491300469004 /* Assets.xcassets */,
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B343427275AD44200AD6A78 /* TitleCell.swift in Sources */,
 				0B3433DA274EE1C400AD6A78 /* Model.swift in Sources */,
 				0B0DB8B6274D546100469004 /* TableViewController.swift in Sources */,
 				0B0DB89E274C491000469004 /* ViewController.swift in Sources */,

@@ -10,7 +10,8 @@ import UIKit
 class TableViewController: UITableViewController, UICollectionViewDataSource {
 
     
-
+    @IBOutlet weak var titleOutlet: UILabel!
+    
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var mainImage: UIImageView!
@@ -22,7 +23,8 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
     
  //   var coctailManager = CoctailManager()
     var movieGenerator = MovieGenarator()
-    
+    var titleMovie = "55"
+    var posterMovie = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +34,17 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
         
         
         movieGenerator.onCompletion = { movie in
-            print(movie.title)
+           // print(movie.title)
             print("Hello")
+            self.titleMovie = movie.title
+            self.posterMovie = movie.poster
+            print(self.titleMovie)
+            
+            
         }
         movieGenerator.fetchMovieWithAlamofire()
+        
+      //  titleOutlet.text = titleMovie ?? ""
         
        // fetchMovieWithAlamofire()
         
@@ -71,14 +80,19 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row < 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CellTitle", for: indexPath)
-            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CellTitle", for: indexPath) as! TitleCell
+       //     cell.textLabel?.text = "Hello!"
+//            cell.title.text = "\(titleMovie)"
+//            print("Hey", titleMovie)
+  //      cell.title.text = titleMovie
+          //  name.text = titleMovie
+            cell.setTitle()
             
             return cell
         }
         if indexPath.row < 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellImage", for: indexPath)
-         //   cell.imageView?.image = UIImage(named: "TequilaS")
+       //     cell.imageView?.image = UIImage(data: poster)
             return cell
         }
         if indexPath.row < 3 {
