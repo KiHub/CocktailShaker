@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 
 class TableViewController: UITableViewController, UICollectionViewDataSource {
 
@@ -37,7 +37,7 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
         title = "Especially for you:"
         
         print("Title movie:\(titleMovie)")
-        
+       
         
         
 //        movieGenerator.onCompletion = { movie in
@@ -109,7 +109,11 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
         if indexPath.row < 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellImage", for: indexPath) as! ImageCell
        //     cell.imageView?.image = UIImage(data: poster)
-       //     cell.posterMovie.image = .init(URL(string: posterMovie)!)
+            print("Poster", posterMovie)
+            cell.posterMovie.image = UIImage(named: "shakerBeige")
+            
+//            cell.posterMovie.sd_setImage(with: URL(string: "https://m.media-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_SX300.jpg"), completed: nil)
+           // cell.posterMovie.image =
             return cell
         }
         if indexPath.row < 3 {

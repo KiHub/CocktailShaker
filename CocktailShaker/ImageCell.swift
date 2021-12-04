@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ImageCell: UITableViewCell {
 
   
     @IBOutlet weak var posterMovie: UIImageView!
     
+   
 }

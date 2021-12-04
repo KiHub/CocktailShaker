@@ -62,7 +62,7 @@ class ViewController: UIViewController {
             plotFromMovie = movie.plot
             imageFromMovie = movie.poster
          //   self.delegate?.updateTable(self, with: movie)
-            print("FILM:",titleFromMovie)
+            print("FILM:",movie.poster)
          //   print(movie.actors)
            // self.onCompletion?(movie)
         }
@@ -74,7 +74,8 @@ class ViewController: UIViewController {
        tableVC.titleMovie = titleFromMovie
         tableVC.plotMovie = plotFromMovie
         tableVC.posterMovie = imageFromMovie
-        print(titleFromMovie)
+    
+        print("IMG",imageFromMovie)
     }
     
 }
