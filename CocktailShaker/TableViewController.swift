@@ -72,6 +72,9 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    
+   
 
     // MARK: - Table view data source
 
@@ -106,7 +109,7 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
         if indexPath.row < 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellImage", for: indexPath) as! ImageCell
        //     cell.imageView?.image = UIImage(data: poster)
-            cell.posterMovie.image = UIImage(data: posterMovie)
+       //     cell.posterMovie.image = .init(URL(string: posterMovie)!)
             return cell
         }
         if indexPath.row < 3 {
@@ -127,6 +130,7 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
 
         return cell
     }
+    
     
    
 
@@ -187,6 +191,9 @@ extension TableViewController {
         
     }
 }
+
+
+
 
 //
 //extension TableViewController {
