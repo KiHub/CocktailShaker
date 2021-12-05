@@ -26,12 +26,28 @@ class ViewController: UIViewController {
         fetchMovieWithAlamofire()
         instructionLabel.layer.cornerRadius = 15
         instructionLabel.layer.masksToBounds = true
+        
+        becomeFirstResponder()
     }
     
     @IBAction func shakeButton(_ sender: UIButton) {
         
         fetchMovieWithAlamofire()
     }
+    
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        
+    }
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            fetchMovieWithAlamofire()
+            performSegue(withIdentifier: "segue", sender: nil)
+        }
+    }
+    
     
     func randomFilmId() -> String {
         

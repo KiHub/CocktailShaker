@@ -28,7 +28,7 @@
                                 </state>
                                 <connections>
                                     <action selector="shakeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yvg-bw-T5T"/>
-                                    <segue destination="wHj-MO-JnT" kind="show" id="Mlk-vm-gTB"/>
+                                    <segue destination="wHj-MO-JnT" kind="show" identifier="segue" id="Mlk-vm-gTB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake your phone and get an awesome movie" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2R-lE-QMG">
