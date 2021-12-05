@@ -8,40 +8,29 @@
 import UIKit
 import Alamofire
 
-//var drinks = [Drink]()
 
-// let key = "1f81e8e1"
-
-// let randomNumber = Int.random(in: 0000000...4513678)
 
 protocol MovieGenaratorDelegate {
     func updateTable(_: MovieGenarator, with movie: Movie)
 }
 
 struct MovieGenarator {
-//    var onCompletion: ((Movie) -> Void)?
     var delegate: MovieGenaratorDelegate?
-
-func fetchMovieWithAlamofire() {
- 
-    
-    
-    let names = ["0910970", "1049413", "0088763"]
-    let randomName = names.randomElement() ?? ""
-    print(randomName)
-    
-    let request = AF.request("https://www.omdbapi.com/?i=tt\(randomName)&apikey=\(key)")
-       
-    request.responseDecodable(of: Movie.self) { (response) in
-        guard let movie = response.value else { return }
+    func fetchMovieWithAlamofire() {
         
-        self.delegate?.updateTable(self, with: movie)
-        print(movie.title)
-     //   print(movie.actors)
-       // self.onCompletion?(movie)
+        
+        
+        let names = ["0910970", "1049413", "0088763"]
+        let randomName = names.randomElement() ?? ""
+        print(randomName)
+        let request = AF.request("https://www.omdbapi.com/?i=tt\(randomName)&apikey=\(key)")
+        
+        request.responseDecodable(of: Movie.self) { (response) in
+            guard let movie = response.value else { return }
+            self.delegate?.updateTable(self, with: movie)
+            print(movie.title)
+        }
     }
-
-}
 }
 
 

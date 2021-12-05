@@ -21,9 +21,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydG-Ae-mCS">
-                                <rect key="frame" x="162" y="364" width="90" height="168"/>
+                                <rect key="frame" x="149" y="344" width="116.5" height="208"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" image="shakerBeige">
+                                <state key="normal" image="popcorn">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
                                 </state>
                                 <connections>
@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake your phone and get an awesome movie" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2R-lE-QMG">
-                                <rect key="frame" x="45" y="622" width="324" height="55"/>
+                                <rect key="frame" x="45" y="642" width="324" height="55"/>
                                 <color key="backgroundColor" red="0.4039215686" green="0.53725490200000003" blue="0.51372549020000002" alpha="0.3807255993150685" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="zOh-ar-mqr"/>
@@ -92,9 +92,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Margarita" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWF-d1-Q6a">
-                                            <rect key="frame" x="152" y="5.5" width="110" height="33"/>
-                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Margarita" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWF-d1-Q6a">
+                                            <rect key="frame" x="131.5" y="-1" width="151.5" height="46"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="33"/>
                                             <color key="textColor" red="0.90196078430000004" green="0.86666666670000003" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -209,7 +209,7 @@ Shake the other ingredients with ice, then carefully pour into the glass.</strin
     </scenes>
     <resources>
         <image name="background" width="1454" height="2018"/>
-        <image name="shakerBeige" width="90" height="168"/>
+        <image name="popcorn" width="116.5" height="208"/>
         <image name="walle" width="300" height="445"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

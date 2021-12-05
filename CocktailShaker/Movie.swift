@@ -17,7 +17,7 @@ struct Movie: Codable {
     let metascore, imdbRating, imdbVotes, imdbID: String
     let type, dvd, boxOffice, production: String
     let website, response: String
-
+    
     enum CodingKeys: String, CodingKey {
         case title = "Title"
         case year = "Year"
@@ -48,7 +48,7 @@ struct Movie: Codable {
 // MARK: - Rating
 struct Rating: Codable {
     let source, value: String
-
+    
     enum CodingKeys: String, CodingKey {
         case source = "Source"
         case value = "Value"
