@@ -21,10 +21,25 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
        tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
      //   title = "Especially for you:"
+     //   becomeFirstResponder()
+        
         
     }
     
-    
+//    //MARK: - Shake
+//    override var canBecomeFirstResponder: Bool {
+//        return true
+//    }
+//    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+//
+//    }
+//    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+//        if motion == .motionShake {
+//            print("Shake")
+//           dismiss(animated: true, completion: nil)
+//
+//        }
+//    }
    
 
     // MARK: - Table view data source
