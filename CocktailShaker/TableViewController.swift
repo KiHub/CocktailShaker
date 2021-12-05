@@ -33,7 +33,11 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
         super.viewDidLoad()
   //      movieGenerator.delegate = self
       
-        tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
+       tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
+        
+        
+   
+        
         title = "Especially for you:"
         
         
@@ -108,21 +112,35 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
         }
         if indexPath.row < 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellImage", for: indexPath) as! ImageCell
-       //     cell.imageView?.image = UIImage(data: poster)
-         //   print("Poster", posterMovie)
+          //  cell.imageView?.image = UIImage(data: poster)
+          //  print("Poster", posterMovie)
+         //   tableView.rowHeight = 450
             
             let myImageViewe: UIImageView = {
-                let myImageViewe = UIImageView(frame: CGRect(x: 0, y: 0, width: 350, height: 450))
+                let myImageViewe = UIImageView(frame: CGRect(x: 0, y: 0, width: 350, height: 500))
                 myImageViewe.contentMode = .scaleAspectFit
+               // myImageViewe.center = cell.center
+                
+             //   myImageViewe.translatesAutoresizingMaskIntoConstraints = false
+                myImageViewe.layer.masksToBounds = true
                 myImageViewe.clipsToBounds = true
+               
                 return myImageViewe
             }()
             
             
                       guard let url = URL(string: imageMovie) else { return cell }
-            myImageViewe.center = cell.center
+                      myImageViewe.center = cell.center
                       myImageViewe.sd_setImage(with: url, completed: nil)
+            
                       cell.addSubview(myImageViewe)
+           // tableView.reloadData()
+           // tableView.rowHeight = 450
+          
+        
+       //     myImageViewe.contentMode = .redraw
+        //    myImageViewe.layer.cornerRadius = 20
+          
          //   myImageViewe.layer.bounds.width = view.layer.wid
             
            // cell.posterMovie.image = UIImage(named: "shakerBeige")
@@ -151,7 +169,12 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
     }
     
     
-   
+
+    
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 190
+//    }
+  
 
     /*
     // Override to support conditional editing of the table view.
