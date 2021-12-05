@@ -8,6 +8,8 @@
 import UIKit
 import Alamofire
 import SDWebImage
+import Spring
+
 
 var titleFromMovie = ""
 var plotFromMovie = ""
@@ -15,13 +17,18 @@ var imageFromMovie = ""
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var shake: UIButton!
+    @IBOutlet weak var shake: SpringButton!
     
-    @IBOutlet weak var instructionLabel: UILabel!
+    @IBOutlet weak var instructionLabel: SpringLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
      //   title = "It’s shaker"
+        instructionLabel.animation = "morph"
+        instructionLabel.curve = "spring"
+        instructionLabel.duration =  3.0
+        instructionLabel.animate()
+      
         
         fetchMovieWithAlamofire()
         instructionLabel.layer.cornerRadius = 15
@@ -30,8 +37,9 @@ class ViewController: UIViewController {
         becomeFirstResponder()
     }
     
-    @IBAction func shakeButton(_ sender: UIButton) {
-        
+    @IBAction func shakeButton(_ sender: SpringButton) {
+      
+     
         fetchMovieWithAlamofire()
     }
     
@@ -44,6 +52,7 @@ class ViewController: UIViewController {
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             fetchMovieWithAlamofire()
+           
             performSegue(withIdentifier: "segue", sender: nil)
         }
     }
