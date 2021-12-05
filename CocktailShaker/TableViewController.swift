@@ -140,6 +140,10 @@ class TableViewController: UITableViewController, UICollectionViewDataSource {
         
        //     myImageViewe.contentMode = .redraw
         //    myImageViewe.layer.cornerRadius = 20
+        //    myImageViewe.layer.masksToBounds = true
+            
+         //   cell.layer.cornerRadius = 20
+           // cell.layer.masksToBounds = true
           
          //   myImageViewe.layer.bounds.width = view.layer.wid
             

@@ -31,7 +31,7 @@
                                     <segue destination="wHj-MO-JnT" kind="show" id="Mlk-vm-gTB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake your phone and get random cocktail recipe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2R-lE-QMG">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake your phone and get an awesome movie" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2R-lE-QMG">
                                 <rect key="frame" x="45" y="622" width="324" height="55"/>
                                 <color key="backgroundColor" red="0.4039215686" green="0.53725490200000003" blue="0.51372549020000002" alpha="0.3807255993150685" colorSpace="calibratedRGB"/>
                                 <constraints>

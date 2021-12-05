@@ -27,6 +27,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         title = "It’s shaker"
         fetchMovieWithAlamofire()
+        instructionLabel.layer.cornerRadius = 15
+        instructionLabel.layer.masksToBounds = true
 
         
     }
