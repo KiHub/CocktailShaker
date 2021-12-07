@@ -22,7 +22,7 @@ class TableViewController: UITableViewController {
        tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
      //   title = "Especially for you:"
      //   becomeFirstResponder()
-        
+    
         
     }
     
@@ -66,18 +66,30 @@ class TableViewController: UITableViewController {
         }
         if indexPath.row < 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellImage", for: indexPath) as! ImageCell
-            
+        
             let myImageViewe: UIImageView = {
-                let myImageViewe = UIImageView(frame: CGRect(x: 0, y: 0, width: 250, height: 465))
-                myImageViewe.contentMode = .scaleAspectFit
+                let myImageViewe = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 465))
+                myImageViewe.contentMode = .scaleAspectFill
+              
+                   myImageViewe.layer.cornerRadius = 30
                 myImageViewe.layer.masksToBounds = true
+            
                 myImageViewe.clipsToBounds = true
+                
+               
+                
+             //   myImageViewe.translatesAutoresizingMaskIntoConstraints = true
+              //  myImageViewe.center = CGPoint(x: cell.bounds.midX + 100, y: cell.bounds.midY)
+//                myImageViewe.autoresizingMask = [UIImageView.AutoresizingMask.flexibleLeftMargin, UIImageView.AutoresizingMask.flexibleRightMargin, UIImageView.AutoresizingMask.flexibleTopMargin, UIImageView.AutoresizingMask.flexibleBottomMargin]
                
                 return myImageViewe
             }()
             
             
                       guard let url = URL(string: imageMovie) else { return cell }
+            
+            
+            
                       myImageViewe.center = cell.center
                       myImageViewe.sd_setImage(with: url, completed: nil)
                       cell.addSubview(myImageViewe)
@@ -97,6 +109,8 @@ class TableViewController: UITableViewController {
     
 
 }
+
+
 
 //extension TableViewController {
 //    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
