@@ -193,7 +193,7 @@ Shake the other ingredients with ice, then carefully pour into the glass.</strin
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hf9-zu-rBk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1992.753623188406" y="-43.526785714285715"/>
+            <point key="canvasLocation" x="1914" y="104"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4pL-d3-DdL">

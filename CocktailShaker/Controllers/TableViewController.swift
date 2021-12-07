@@ -21,8 +21,6 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
         //   title = "Especially for you:"
- 
-
     }
     // MARK: - Table view data source
     
@@ -46,8 +44,7 @@ class TableViewController: UITableViewController {
             return cell
         }
         if indexPath.row < 2 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CellImage", for: indexPath) as! ImageCell
-            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CellImage", for: indexPath) 
             let myImageViewe: UIImageView = {
                 let myImageViewe = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 465))
                 myImageViewe.contentMode = .scaleAspectFill
@@ -77,20 +74,5 @@ class TableViewController: UITableViewController {
         
         return cell
     }
-    
-    
+
 }
-
-
-
-//extension TableViewController {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 5
-//    }
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCellIngridients", for: indexPath) as? IngridientsCollectionViewCell
-//        return cell!
-//
-//    }
-//}
-
