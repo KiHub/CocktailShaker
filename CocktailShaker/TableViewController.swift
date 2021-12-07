@@ -9,9 +9,9 @@ import UIKit
 import SDWebImage
 
 class TableViewController: UITableViewController {
-
     
-    var movieGenerator = MovieGenarator()
+    
+    
     var titleMovie = "zzzz"
     var plotMovie = ""
     var imageMovie = ""
@@ -19,83 +19,54 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
-     //   title = "Especially for you:"
-     //   becomeFirstResponder()
-    
-        
+        tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
+        //   title = "Especially for you:"
+ 
+
     }
-    
-//    //MARK: - Shake
-//    override var canBecomeFirstResponder: Bool {
-//        return true
-//    }
-//    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-//
-//    }
-//    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-//        if motion == .motionShake {
-//            print("Shake")
-//           dismiss(animated: true, completion: nil)
-//
-//        }
-//    }
-   
-
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 3
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row < 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellTitle", for: indexPath) as! TitleCell
-     
             cell.title.text = titleMovie
             
             return cell
         }
         if indexPath.row < 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellImage", for: indexPath) as! ImageCell
-        
+            
             let myImageViewe: UIImageView = {
                 let myImageViewe = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 465))
                 myImageViewe.contentMode = .scaleAspectFill
-              
-                   myImageViewe.layer.cornerRadius = 30
+                myImageViewe.layer.cornerRadius = 30
                 myImageViewe.layer.masksToBounds = true
-            
                 myImageViewe.clipsToBounds = true
-                
-               
-                
-             //   myImageViewe.translatesAutoresizingMaskIntoConstraints = true
-              //  myImageViewe.center = CGPoint(x: cell.bounds.midX + 100, y: cell.bounds.midY)
-//                myImageViewe.autoresizingMask = [UIImageView.AutoresizingMask.flexibleLeftMargin, UIImageView.AutoresizingMask.flexibleRightMargin, UIImageView.AutoresizingMask.flexibleTopMargin, UIImageView.AutoresizingMask.flexibleBottomMargin]
-               
+  
                 return myImageViewe
             }()
+
+            guard let url = URL(string: imageMovie) else { return cell }
+
+            myImageViewe.center = cell.center
+            myImageViewe.sd_setImage(with: url, completed: nil)
+            cell.addSubview(myImageViewe)
             
-            
-                      guard let url = URL(string: imageMovie) else { return cell }
-            
-            
-            
-                      myImageViewe.center = cell.center
-                      myImageViewe.sd_setImage(with: url, completed: nil)
-                      cell.addSubview(myImageViewe)
             return cell
         }
-
+        
         if indexPath.row < 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellDescription", for: indexPath) as! PlotCell
             cell.plotText.text = plotMovie
@@ -107,7 +78,7 @@ class TableViewController: UITableViewController {
         return cell
     }
     
-
+    
 }
 
 

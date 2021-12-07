@@ -16,7 +16,6 @@
 		0B0DB8B6274D546100469004 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0DB8B5274D546100469004 /* TableViewController.swift */; };
 		0B0DB8BD274E4C3D00469004 /* IngridientsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0DB8BC274E4C3D00469004 /* IngridientsCollectionViewCell.swift */; };
 		0B0DB8C1274E578900469004 /* IngridientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0DB8C0274E578900469004 /* IngridientsTableViewCell.swift */; };
-		0B3433DA274EE1C400AD6A78 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3433D9274EE1C400AD6A78 /* Model.swift */; };
 		0B3433F22759325A00AD6A78 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3433F12759325A00AD6A78 /* Movie.swift */; };
 		0B343424275ABA3900AD6A78 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B343423275ABA3900AD6A78 /* Constant.swift */; };
 		0B343427275AD44200AD6A78 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B343426275AD44200AD6A78 /* TitleCell.swift */; };
@@ -37,7 +36,6 @@
 		0B0DB8B5274D546100469004 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		0B0DB8BC274E4C3D00469004 /* IngridientsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsCollectionViewCell.swift; sourceTree = "<group>"; };
 		0B0DB8C0274E578900469004 /* IngridientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsTableViewCell.swift; sourceTree = "<group>"; };
-		0B3433D9274EE1C400AD6A78 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		0B3433F12759325A00AD6A78 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		0B343423275ABA3900AD6A78 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		0B343426275AD44200AD6A78 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 				0B0DB899274C491000469004 /* AppDelegate.swift */,
 				0B0DB89B274C491000469004 /* SceneDelegate.swift */,
 				0B0DB89D274C491000469004 /* ViewController.swift */,
-				0B3433D9274EE1C400AD6A78 /* Model.swift */,
 				0B3433F12759325A00AD6A78 /* Movie.swift */,
 				0B0DB8B5274D546100469004 /* TableViewController.swift */,
 				0B343423275ABA3900AD6A78 /* Constant.swift */,
@@ -233,7 +230,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B343427275AD44200AD6A78 /* TitleCell.swift in Sources */,
-				0B3433DA274EE1C400AD6A78 /* Model.swift in Sources */,
 				0B0DB8B6274D546100469004 /* TableViewController.swift in Sources */,
 				0B0DB89E274C491000469004 /* ViewController.swift in Sources */,
 				0B0DB8C1274E578900469004 /* IngridientsTableViewCell.swift in Sources */,

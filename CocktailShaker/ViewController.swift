@@ -28,7 +28,13 @@ class ViewController: UIViewController {
         instructionLabel.curve = "spring"
         instructionLabel.duration =  3.0
         instructionLabel.animate()
+        
+        shake.layer.shadowColor = UIColor.black.cgColor
+        shake.layer.shadowOpacity = 0.5
+        shake.layer.shadowOffset = .init(width: 5, height: 5)
+        shake.layer.shadowRadius = 5
       
+     
         
         fetchMovieWithAlamofire()
         instructionLabel.layer.cornerRadius = 15
@@ -60,7 +66,7 @@ class ViewController: UIViewController {
     
     func randomFilmId() -> String {
         
-        let names = ["0910970", "1049413", "0088763", "0068646", "0110912", "0109830", "0167261", "0133093", "0110413", "0152930", "0110413", "0119116", "0376136", "0096283", "0347149", "0876563", "0088247"].shuffled()
+        let names = namesArray.shuffled()
         let randomName = names.randomElement() ?? ""
         print(randomName)
         return randomName
