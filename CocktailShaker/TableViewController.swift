@@ -68,7 +68,7 @@ class TableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellImage", for: indexPath) as! ImageCell
             
             let myImageViewe: UIImageView = {
-                let myImageViewe = UIImageView(frame: CGRect(x: 0, y: 0, width: 350, height: 500))
+                let myImageViewe = UIImageView(frame: CGRect(x: 0, y: 0, width: 250, height: 465))
                 myImageViewe.contentMode = .scaleAspectFit
                 myImageViewe.layer.masksToBounds = true
                 myImageViewe.clipsToBounds = true
