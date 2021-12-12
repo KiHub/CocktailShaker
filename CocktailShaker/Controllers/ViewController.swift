@@ -40,6 +40,7 @@ class ViewController: UIViewController {
         instructionLabel.layer.cornerRadius = 15
         instructionLabel.layer.masksToBounds = true
         
+       
         becomeFirstResponder()
     }
     
@@ -48,6 +49,9 @@ class ViewController: UIViewController {
      
         fetchMovieWithAlamofire()
     }
+    
+    
+    
     
     override var canBecomeFirstResponder: Bool {
         return true

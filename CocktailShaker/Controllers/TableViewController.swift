@@ -20,6 +20,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
+      //  addNavigationItem()
         //   title = "Especially for you:"
     }
     // MARK: - Table view data source
@@ -34,6 +35,14 @@ class TableViewController: UITableViewController {
         return 3
     }
     
+//    func addNavigationItem() {
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(
+//            title: ">",
+//            style: .plain,
+//            target: self,
+//            action: #selector(method)
+//        )
+//    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
